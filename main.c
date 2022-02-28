@@ -32,12 +32,12 @@ int main()
   }
   else {
     for (int j = 0; j < i; j++) {
-      ost = 0;
+      mod = 0;
       step = 0;
       while (s1[j] != 0) {
-        ost = s1[j] % 10;
+        mod = s1[j] % 10;
         s1[j] = s1[j] / 10;
-        summa += ost * pow(2, step);
+        summa += mod * pow(2, step);
         step++;
       }
       s2[j] = summa;
