@@ -4,7 +4,7 @@
 int main()
 {
   
-  int n, i, summa, step, ost, count, equal, s1[10000], s2[10000];
+  int n, i, summa, step, mod, count, equal, s1[10000], s2[10000];
   count = 0;
   i = 0;
   while ((scanf("%d", &s1[i])) != EOF) {
@@ -16,16 +16,16 @@ int main()
     printf("%d\n", s1[j]);
   }
   for (int j = 0; j < i; j++) {
-    ost = 0;
+    mod = 0;
     equal = s1[j];
     while (s1[j] != 0) {
-      ost = s1[j] % 10;
+      mod = s1[j] % 10;
       s1[j] = s1[j] / 10;
-      if (ost != 0 && ost != 1) {
+      if (mod != 0 && mod != 1) {
         count++;
       }
     }
-    s1[j] = eq;
+    s1[j] = equal;
   }
   if (count != 0) {
     printf("Ошибка! Вы ввели цифры не в двоичной системе счисления\n");
@@ -41,7 +41,7 @@ int main()
         step++;
       }
       s2[j] = summa;
-      summ = 0;
+      summa = 0;
     }
     printf("Массив десятичных чисел\n");
     for (int j = 0; j < i; j++) {
