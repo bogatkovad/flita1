@@ -10,7 +10,7 @@ int main()
   while ((scanf("%d", &s1[i])) != EOF) {
     i++;
   }
-  printf("Массив двоичных чисел\n");
+  printf("Множество двоичных чисел\n");
   for (int j = 0; j < i; j++) {
     printf("%d: ", j + 1);
     printf("%d\n", s1[j]);
@@ -43,7 +43,7 @@ int main()
       s2[j] = summa;
       summa = 0;
     }
-    printf("Массив десятичных чисел\n");
+    printf("Множество десятичных чисел\n");
     for (int j = 0; j < i; j++) {
       printf("%d: ", j + 1);
       printf("%d\n", s2[j]);
