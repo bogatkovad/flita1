@@ -3,21 +3,21 @@
 
 int main()
 {
-  int s1[1001], s2[1001], n, i;
-  int ost, summ, degree, count, eq;
+  
+  int n, i, summa, step, ost, count, equal, s1[10000], s2[10000];
   count = 0;
   i = 0;
   while ((scanf("%d", &s1[i])) != EOF) {
     i++;
   }
-  printf("Введенный массив\n");
+  printf("Массив двоичных чисел\n");
   for (int j = 0; j < i; j++) {
     printf("%d: ", j + 1);
     printf("%d\n", s1[j]);
   }
   for (int j = 0; j < i; j++) {
     ost = 0;
-    eq = s1[j];
+    equal = s1[j];
     while (s1[j] != 0) {
       ost = s1[j] % 10;
       s1[j] = s1[j] / 10;
@@ -28,22 +28,22 @@ int main()
     s1[j] = eq;
   }
   if (count != 0) {
-    printf("Вы неправильно ввели двоичные числа\n");
+    printf("Ошибка! Вы ввели цифры не в двоичной системе счисления\n");
   }
   else {
     for (int j = 0; j < i; j++) {
       ost = 0;
-      degree = 0;
+      step = 0;
       while (s1[j] != 0) {
         ost = s1[j] % 10;
         s1[j] = s1[j] / 10;
-        summ += ost * pow(2, degree);
-        degree++;
+        summa += ost * pow(2, step);
+        step++;
       }
-      s2[j] = summ;
+      s2[j] = summa;
       summ = 0;
     }
-    printf("Полученный массив\n");
+    printf("Массив десятичных чисел\n");
     for (int j = 0; j < i; j++) {
       printf("%d: ", j + 1);
       printf("%d\n", s2[j]);
