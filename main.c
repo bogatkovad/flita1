@@ -12,7 +12,7 @@ int main()
   }
   printf("Множество двоичных чисел\n");
   for (int j = 0; j < i; j++) {
-    printf("%d: ", j + 1);
+    printf("%d. ", j + 1);
     printf("%d\n", s1[j]);
   }
   for (int j = 0; j < i; j++) {
@@ -45,7 +45,7 @@ int main()
     }
     printf("Множество десятичных чисел\n");
     for (int j = 0; j < i; j++) {
-      printf("%d: ", j + 1);
+      printf("%d. ", j + 1);
       printf("%d\n", s2[j]);
     }
   }
