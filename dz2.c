@@ -37,7 +37,7 @@ int main()
     }
     output1 = fopen("output1.txt", "w");
     for (int m = 0; m <= i; m++) {
-        fprintf(output2, "%d: ", m + 1);
+        fprintf(output1, "%d: ", m + 1);
         count = 0;
         for (int n = 0; n <= i; n++) {
             if (s2[m][n] == '1') {
@@ -82,7 +82,7 @@ int main()
     }
     fprintf(output, "}");
     fclose(output);
-    system("dot output.gv -Tpng -o graphtvd.png");
-    system("graphtvd.png");
+    system("dot output.gv -Tpng -o graph.png");
+    system("graph.png");
     return 0;
 }
