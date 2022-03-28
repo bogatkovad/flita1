@@ -4,8 +4,9 @@
 int main()
 {
     FILE *input, *output, *output1;
-    char a, s[30][30], s2[30][30];
-    int i = 0, j = 0, count = 0, b = 0;
+    char a, s[30][30];
+    int s2[30][30];
+    int i = 0, j = 0, m = 0, n = 0, count = 0, b = 0;
 
     input = fopen("input.txt", "r"); 
     while (!feof(input)) {
@@ -39,7 +40,7 @@ int main()
     for (int m = 0; m <= i; m++) {
         fprintf(output1, "%d: ", m + 1);
         count = 0;
-        for (int n = 0; n <= i; n++) {
+        for (int n = 0; n < j; n++) {
             if (s2[m][n] == '1') {
                 fprintf(output1, "%d ", n + 1);
                 count++;
