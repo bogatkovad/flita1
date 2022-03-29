@@ -3,7 +3,7 @@
 
 int main()
 {
-    FILE *input, *output, *output2;
+    FILE *input, *output, *output1;
     char a, s[30][30];
     char s2[30][30];
     int i = 0, j = 0, count = 0, b = 0, v = 0;
@@ -39,17 +39,17 @@ int main()
             v = 1;
         }
     }
-    output2 = fopen("output2.txt", "w");
+    output1 = fopen("output1.txt", "w");
     for (int m = 0; m <= i; m++) {
-        fprintf(output2, "%d: ", m + 1);
+        fprintf(output1, "%d: ", m + 1);
         count = 0;
         for (int n = 0; n <= i; n++) {
             if (s2[m][n] == '1') {
-                fprintf(output2, "%d ", n + 1);
+                fprintf(output1, "%d ", n + 1);
                 count++;
             }
         }
-        fprintf(output2, "\n");
+        fprintf(output1, "\n");
     }
     for (int m = 0; m < i; m++) {
         for (int k = m + 1; k <= i; k++) {
@@ -65,17 +65,17 @@ int main()
         }
     }
     if (v == 1) {
-        fprintf(output2, "Граф не является простым");
+        fprintf(output1, "Граф не является простым");
     }
     else {
         if (j > ((i - 2) * (i - 1) / 2)) {
-            fprintf(output2, "Граф связный");
+            fprintf(output1, "Граф связный");
         }
         else {
-            fprintf(output2, "Граф несвязный");
+            fprintf(output1, "Граф несвязный");
         }
     }
-    fclose(output2);
+    fclose(output1);
     output = fopen("output.gv", "w"); 
     fprintf(output, "graph G {\n");
     fprintf(output, "node [shape = circle];\n");
