@@ -69,10 +69,10 @@ int main()
     }
     else {
         if (j > ((i - 2) * (i - 1) / 2)) {
-            fprintf(output2, "Граф связный");
+            fprintf(output2, "Граф простой и связный");
         }
         else {
-            fprintf(output2, "Граф несвязный");
+            fprintf(output2, "Граф простой и несвязный");
         }
     }
     fclose(output2);
@@ -110,7 +110,7 @@ int main()
     }
     fprintf(output, "}");
     fclose(output);
-    system("dot output.gv -Tpng -o graphtvd.png");
-    system("graphtvd.png");
+    system("dot output.gv -Tpng -o graph.png");
+    system("graph.png");
     return 0;
 }
